@@ -1,0 +1,17 @@
+*.gem
+*.rbc
+*~
+.*.swp
+.DS_Store
+/.bundle
+/.config
+/.yardoc
+/Gemfile.lock
+/InstalledFiles
+/coverage
+/doc/public
+/lib/bundler/man
+/pkg
+/spec/reports
+/tmp
+/vendor/cache
