@@ -16,7 +16,7 @@ This may or may not work nicely with
 
 Add this line to your Chef repository's Gemfile:
 
-    gem 'knife-briefcase', :git => git://github.com/3ofcoins/knife-briefcase/
+    gem 'knife-briefcase', :git => 'git://github.com/3ofcoins/knife-briefcase/'
 
 Or install it yourself:
 
