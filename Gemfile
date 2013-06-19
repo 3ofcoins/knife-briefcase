@@ -4,7 +4,7 @@ gemspec
 
 # Helpers used with development, but not needed in runtime, build
 # time, or for tests.
-group :development do
+group :development_workstation do
   gem 'awesome_print'
   gem 'pry'
   gem 'pry-debugger'
