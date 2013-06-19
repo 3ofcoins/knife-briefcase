@@ -25,5 +25,8 @@ class Chef::Knife::BriefcaseGet < KnifeBriefcase::Knife
     else
       stdout.write(crypto.decrypt(GPGME::Data.from_str(encrypted)))
     end
+  rescue GPGME::Error::DecryptFailed
+    Chef::Log.fatal("Decryption failed")
+    exit 1
   end
 end
