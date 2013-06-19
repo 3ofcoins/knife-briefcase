@@ -7,6 +7,7 @@ module KnifeBriefcase
         require 'chef/data_bag'
         require 'chef/data_bag_item'
         require 'gpgme'
+        require 'highline'
         yield if block_given?
       end
     end
@@ -39,6 +40,12 @@ module KnifeBriefcase
 
     def item_name
       @name_args.first
+    end
+
+    def highline
+      super
+    rescue NameError
+      @highline ||= HighLine.new
     end
 
     def file
