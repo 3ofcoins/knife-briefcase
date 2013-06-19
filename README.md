@@ -77,3 +77,7 @@ briefcase_holders [
 ## Contributing
 
 See the [CONTRIBUTING.md](CONTRIBUTING.md) file
+
+------------------------------------------------------------------------------
+
+[![Build Status](https://travis-ci.org/3ofcoins/knife-briefcase.png?branch=master)](https://travis-ci.org/3ofcoins/knife-briefcase)
