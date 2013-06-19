@@ -12,7 +12,6 @@ describe Chef::Knife::BriefcaseDelete do
         'test+knife-briefcase-2@3ofcoins.net',
         'test+knife-briefcase-1@3ofcoins.net' ]
     end
-    # knife_input = "y\n"
   end
 
   it 'deletes a previously uploaded item' do
