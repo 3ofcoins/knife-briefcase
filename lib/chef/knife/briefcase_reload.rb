@@ -1,7 +1,7 @@
 require 'knife-briefcase/knife'
 
 class Chef::Knife::BriefcaseReload < KnifeBriefcase::Knife
-  banner = "knife briefcase reload [NAME [NAME [...]]]"
+  banner "knife briefcase reload [NAME [NAME [...]]]"
 
   def run
     item_names = if @name_args.empty?
