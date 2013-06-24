@@ -4,7 +4,7 @@ class Chef::Knife::BriefcaseGet < KnifeBriefcase::Knife
   banner = "knife briefcase get NAME [FILE]"
 
   def run
-    encrypted = Chef::DataBagItem.load(data_bag_name, @name_args[0]).raw_data['content']
+    encrypted Chef::DataBagItem.load(data_bag_name, @name_args[0]).raw_data['content']
 
     begin
       crypto.verify(GPGME::Data.from_str(encrypted)) do |sig|

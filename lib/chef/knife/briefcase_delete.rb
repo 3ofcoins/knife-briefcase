@@ -1,7 +1,7 @@
 require 'knife-briefcase/knife'
 
 class Chef::Knife::BriefcaseDelete < KnifeBriefcase::Knife
-  banner = "knife briefcase delete NAME [NAME [...]]"
+  banner "knife briefcase delete NAME [NAME [...]]"
 
   def run
     @name_args.each do |item_name|

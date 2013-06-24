@@ -23,7 +23,7 @@ module KnifeBriefcase
     category 'briefcase'
 
     option :data_bag,
-           :long => '--data-bag',
+           :long => '--data-bag DATA_BAG_NAME',
            :description => 'Name of the data bag'
 
     def data_bag_name
