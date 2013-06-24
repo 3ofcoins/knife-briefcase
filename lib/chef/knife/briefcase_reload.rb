@@ -1,6 +1,7 @@
 require 'knife-briefcase/knife'
 
-class Chef::Knife::BriefcaseReload < KnifeBriefcase::Knife
+class Chef::Knife::BriefcaseReload < Chef::Knife
+  include KnifeBriefcase::Knife
   banner "knife briefcase reload [NAME [NAME [...]]]"
 
   def run

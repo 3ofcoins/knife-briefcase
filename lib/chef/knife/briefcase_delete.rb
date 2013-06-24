@@ -1,6 +1,7 @@
 require 'knife-briefcase/knife'
 
-class Chef::Knife::BriefcaseDelete < KnifeBriefcase::Knife
+class Chef::Knife::BriefcaseDelete < Chef::Knife
+  include KnifeBriefcase::Knife
   banner "knife briefcase delete NAME [NAME [...]]"
 
   def run
