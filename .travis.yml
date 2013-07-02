@@ -1,5 +1,13 @@
+---
 bundler_args: --without development_workstation
 script: bundle exec thor spec:ci
 rvm:
-  - 1.9.3
-  - 2.0.0
+- 1.9.3
+- 2.0.0
+notifications:
+  hipchat:
+    secure: ! 'f83Ygzt9/IIABIe7W0lVEifCw7PIbrHiqQt/JTAawb0G10NgG2Svui9+fMj2
+
+      Byz4WPy0L4wOQ6YS8rV4Tv7tKjioSpUfkXClDlCLG0rFUEh4i/EsWVV+8NJ7
+
+      9ju8aksblSo22OaFGd8ufUPYEhMY/05m/wAVAyxtVqZGANXrPYc='
