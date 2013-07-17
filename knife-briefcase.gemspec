@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = KnifeBriefcase::VERSION
   spec.authors       = ["Maciej Pasternacki"]
   spec.email         = ["maciej@pasternacki.net"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = 'Knife plugin to store GPG-encrypted data in Chef data bag'
+  spec.summary       = spec.description
   spec.homepage      = "https://github.com/3ofcoins/knife-briefcase/"
   spec.license       = "MIT"
 
