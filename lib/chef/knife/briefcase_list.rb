@@ -1,7 +1,6 @@
 require 'knife-briefcase/knife'
 
-class Chef::Knife::BriefcaseList < Chef::Knife
-  include KnifeBriefcase::Knife
+class Chef::Knife::BriefcaseList < KnifeBriefcase::Knife
   banner "knife briefcase list"
 
   def run

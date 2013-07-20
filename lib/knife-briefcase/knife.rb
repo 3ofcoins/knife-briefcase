@@ -1,9 +1,13 @@
 require 'chef/knife'
 
 module KnifeBriefcase
-  module Knife
+  class Knife < Chef::Knife
     def self.deps
       super do
+        require 'chef/data_bag'
+        require 'chef/data_bag_item'
+        require 'gpgme'
+        require 'highline'
         yield if block_given?
       end
     end
@@ -11,19 +15,14 @@ module KnifeBriefcase
     def self.inherited(c)
       super
 
-      c.class_eval do
-        deps do
-          require 'chef/data_bag'
-          require 'chef/data_bag_item'
-          require 'gpgme'
-          require 'highline'
-        end
+      # Ensure we always get to do our includes, whether subclass calls deps or not
+      c.deps do
+      end
 
-        category 'briefcase'
-        option :data_bag,
+      c.category 'briefcase'
+      c.option :data_bag,
                :long => '--data-bag DATA_BAG_NAME',
                :description => 'Name of the data bag'
-      end
     end
 
     def data_bag_name
