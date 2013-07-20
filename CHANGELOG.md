@@ -1,6 +1,12 @@
 Changes
 =======
 
+0.1.0
+-----
+
+ * Bugfixes
+ * Add git-annex hook
+
 0.0.1
 -----
 

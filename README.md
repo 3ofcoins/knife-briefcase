@@ -49,6 +49,26 @@ re-encrypted. This should be called when briefcase holders list is
 changed, to allow added user to decrypt bag - or to prevent further
 access by removed user.
 
+## Git Annex support
+
+The briefcase is a perfect storage backend for
+[git-annex](http://git-annex.branchable.com/). This combination lets
+you pretend-store secret files in the repository, sync them over
+git-annex, and have the content safely encrypted on the Chef server.
+
+To use briefcase as a git-annex special repo, configure a
+[hook](http://git-annex.branchable.com/special_remotes/hook/):
+
+```
+$ git config annex.briefcase-hook 'knife briefcase annex hook'
+$ git annex initremote briefcase type=hook hooktype=briefcase encryption=none
+```
+
+By default, annex content will be stored in the `annex` data bag; you
+can pass `--data-bag=NAME` argument to `knife briefcase annex hook` or
+configure `briefcase_annex_data_bag` in `knife.rb` to use a different
+data bag.
+
 ## Configuration
 
 Following `knife.rb` settings are used:
@@ -61,6 +81,10 @@ Following `knife.rb` settings are used:
    default to hold encrypted content. If not provided, `briefcase`
    data bag will be used. The data bag name can be overriden on
    command line.
+ - `briefcase_annex_data_bag` -- name of the data bag that will be
+   used by default by `knife briefcase annex hook`. If not provided,
+   `annex` data bag will be used. The data bag name can be overriden
+   on command line.
 
 ### Example configuration
 

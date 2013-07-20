@@ -2,6 +2,7 @@ require 'chef/knife'
 
 module KnifeBriefcase
   class Knife < Chef::Knife
+
     def self.deps
       super do
         require 'chef/data_bag'

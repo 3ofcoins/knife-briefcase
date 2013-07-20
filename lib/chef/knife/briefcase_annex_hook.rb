@@ -8,10 +8,10 @@ class Chef::Knife::BriefcaseAnnexHook < KnifeBriefcase::Knife
 
     case ENV['ANNEX_ACTION']
     when 'store'
-      require 'chef/knife/briefcase/put'
+      require 'chef/knife/briefcase_put'
       run_subcommand BriefcasePut, item_id, ENV['ANNEX_FILE']
     when 'retrieve'
-      require 'chef/knife/briefcase/get'
+      require 'chef/knife/briefcase_get'
       run_subcommand BriefcaseGet, item_id, ENV['ANNEX_FILE']
     when 'remove'
       delete_object(Chef::DataBagItem, item_id, 'briefcase_item') do
