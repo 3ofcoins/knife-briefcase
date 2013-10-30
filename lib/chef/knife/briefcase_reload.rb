@@ -5,7 +5,7 @@ class Chef::Knife::BriefcaseReload < KnifeBriefcase::Knife
 
   def run
     item_names = if @name_args.empty?
-                   Chef::DataBag.list(data_bag_name).keys
+                   Chef::DataBag.load(data_bag_name).keys
                  else
                    @name_args
                  end
